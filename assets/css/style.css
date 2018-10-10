@@ -1,0 +1,72 @@
+html {
+    background: url(../images/raindrop.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    height: 150px;
+    color: white;
+    background-color: orange;
+    width: 400px;
+    text-align: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+}
+
+#rules {
+    background-color: #ffe3c6;
+    width: 500px;
+    color: #74974c;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+    font-size: 14pt;
+}
+
+#random-number {
+    float: left;
+    margin: 20px 0 20px 0;
+    background-color: #3cb374;
+    height: 250px;
+    width: 300px;
+}
+
+#scoreboard {
+    position: relative;
+    left: 300px;
+    background-color: #02feff;
+    height: 250px;
+    width: 150px;
+    margin: 20px 0 20px 20px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+#your-score-text {
+    background-color: #028c8d;
+    height: 40px;
+    width: 400px;
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 14pt;
+}
+
+#your-total-score {
+    background-color: #028c8d;
+    height: 200px;
+    width: 400px;
+    color: white;
+    font-size: 30pt;
+    margin: 10px 0 0 0;
+}
+
+
+
