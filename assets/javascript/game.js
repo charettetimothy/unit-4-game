@@ -13,62 +13,98 @@
 
 var wins = 0;
 var losses = 0;
-
 var ranGenNum = 0;
 
 
 $(document).ready(function () {
-    // create a random number and place it into 'random-number' div
-    var totalScore = 0;
-    // ... we generate a random number between 19-120
-    var ranGenNum = Math.floor(Math.random() * 120) + 19;
 
-    // ... and then dump the random number into our random-number div.
+    var totalScore = 0;
+
+    function resetGame() {
+
+    }
+    // Generate random number(19-120) then put into 'random-number' div.
+    var ranGenNum = Math.floor(Math.random() * 101) + 19;
     $("#random-number").text(ranGenNum);
 
-    // ... we generate a random number between 1-12
+    // Generate a random number(1) then put into 'amethyst' image. 
+    // Allows player to win no matter if ranGenNum is even or odd.
     var amethyst = Math.floor(Math.random() * 1) + 1;
-
-    // ... and then dump the random number into our 'amethyst' div.
     $("#amethyst").text(amethyst);
 
-    // ... we generate a random number between 1-12
-    var bernstein = Math.floor(Math.random() * 6) + 2;
-
-    // ... and then dump the random number into our 'amethyst' div.
+    // Generate a random number(1-12) then put into 'bernstein' image.
+    var bernstein = Math.floor(Math.random() * 12) + 1;
     $("#bernstein").text(bernstein);
 
-    // ... we generate a random number between 1-12
-    var diamond = Math.floor(Math.random() * 9) + 7;
-
-    // ... and then dump the random number into our 'amethyst' div.
+    // Generate a random number(1-12) then put into 'diamond' image.
+    var diamond = Math.floor(Math.random() * 12) + 1;
     $("#diamond").text(diamond);
 
-    // ... we generate a random number between 1-12
-    var fluorite = Math.floor(Math.random() * 12) + 10;
-
-    // ... and then dump the random number into our 'amethyst' div.
+    // Generate a random number(1-12) then put into 'fluorite' image.
+    var fluorite = Math.floor(Math.random() * 12) + 1;
     $("#fluorite").text(fluorite);
-    
+
+    // Grabs string from image, turns into an integer and adds to total score.
     $("#amethyst").on("click", function (event) {
-        console.log(event,totalScore)
-    })
-    $("#bernstein").on("click", function (event) {
-        
         var x = parseInt(event.target.textContent)
-        console.log(x,totalScore)
-        totalScore += x
-        console.log(totalScore)
-        $youtotalscre.text(totalscore)
-        
-    })
-    $("#diamond").on("click", function (event) {
-        console.log(event.target.textContent)
-    })
-    $("#fluorite").on("click", function (event) {
-        console.log(event.target.textContent)
+        totalScore += x;
+        // Displays total score in your-total-score div.
+        $("#your-total-score").text(totalScore);
+        // Logic to keep score.
+        if ((totalScore === ranGenNum)) {
+            wins++;
+        }
+        if ((totalScore > ranGenNum)) {
+            losses++;
+        }
+        $("#wins-text").text(wins);
+        $("#losses-text").text(losses);
     })
 
+    // Grabs string from image, turns into an integer and adds to total score.
+    $("#bernstein").on("click", function (event) {
+        var x = parseInt(event.target.textContent);
+        totalScore += x;
+        $("#your-total-score").text(totalScore);
+        if ((totalScore === ranGenNum)) {
+            wins++;
+        }
+        if ((totalScore > ranGenNum)) {
+            losses++;
+        }
+        $("#wins-text").text(wins);
+        $("#losses-text").text(losses);
+    });
+
+    // Grabs string from image, turns into an integer and adds to total score.
+    $("#diamond").on("click", function (event) {
+        var x = parseInt(event.target.textContent);
+        totalScore += x;
+        $("#your-total-score").text(totalScore);
+        if ((totalScore === ranGenNum)) {
+            wins++;
+        }
+        if ((totalScore > ranGenNum)) {
+            losses++;
+        }
+        $("#wins-text").text(wins);
+        $("#losses-text").text(losses);
+    });
+
+    // Grabs string from image, turns into an integer and adds to total score.
+    $("#fluorite").on("click", function (event) {
+        var x = parseInt(event.target.textContent);
+        totalScore += x;
+        $("#your-total-score").text(totalScore);
+        if ((totalScore === ranGenNum)) {
+            wins++;
+        }
+        if ((totalScore > ranGenNum)) {
+            losses++;
+        }
+        $("#wins-text").text(wins);
+        $("#losses-text").text(losses);
+    });
 
 
 });

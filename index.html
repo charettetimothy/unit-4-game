@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystals Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 
@@ -35,7 +35,14 @@
         </p>
     </div>
     <div id="random-number"></div>
-    <div id="scoreboard"></div>
+    <div id="scoreboard">
+        <div>
+            <h3>Wins: <span id="wins-text"></span></h3>
+        </div>
+        <div>
+            <h4>Losses: <span id="losses-text"></span></h4>
+        </div>
+    </div>
     <div>
         <img id="amethyst" src="/assets/images/amethyst.jpg" alt="amethyst">
         <img id="bernstein" src="/assets/images/bernstein.jpg" alt="bernstein">
@@ -44,8 +51,8 @@
     </div>
     <div id="your-score-text">Your total score is: </div>
     <div id="your-total-score"></div>
-    
-    
+
+
 </body>
 
 </html>

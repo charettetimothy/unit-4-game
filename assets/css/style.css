@@ -32,6 +32,8 @@ h1 {
     background-color: #3cb374;
     height: 250px;
     width: 300px;
+    color: white;
+    font-size: 30pt;
 }
 
 #scoreboard {
@@ -41,6 +43,16 @@ h1 {
     height: 250px;
     width: 150px;
     margin: 20px 0 20px 20px;
+}
+
+h3 {
+    position: absolute;
+    top: 30px;
+}
+
+h4 {
+    position: absolute;
+    top: 80px;
 }
 
 img {
